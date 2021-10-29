@@ -20,13 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'p73zui(k$uz)gv=qgnaaj1of$!*c+-+544j=9l%%ahg$7axhm8'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-aws_host = os.environ.get('AWS_HOST')
-ALLOWED_HOSTS = ['127.0.0.1', aws_host]
+ALLOWED_HOSTS = ['0,0,0,0']
 
 
 # Application definition
@@ -76,6 +75,8 @@ WSGI_APPLICATION = 'myweb.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 DATABASES = {
     'default': {
