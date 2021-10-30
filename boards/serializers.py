@@ -3,12 +3,14 @@ from rest_framework import serializers
 
 
 class BoardSerializer(serializers.ModelSerializer):
+    board = serializers.StringRelatedField()
+
     class Meta:
         model = Board
-        fields = ['id', 'title', 'dt_created', 'dt_modified']
+        fields = ["id", "board", "title", "content", "dt_created", "dt_modified"]
 
 
 class BoardDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Board
-        fields = ['id', 'title', 'content', 'dt_created', 'dt_modified']
+        fields = ["id", "author", "title", "content", "dt_created", "dt_modified"]
