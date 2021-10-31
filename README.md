@@ -1,6 +1,6 @@
 # Django를 이용한 게시판 CRUD 백엔드 서버
 
-Django를 백엔드 서버로 하여 게시판 CRUD 연습해 보았습니다.
+Django를 백엔드 서버로 하여 게시판 CRUD를 연습해 보았습니다.
 <br>
 각 게시글마다 "제목", "내용", "작성자", "작성일", "수정일"이 포함되어 있습니다.
 <br>
@@ -17,7 +17,7 @@ Django RESTframework를 사용하였으며, 연습용이기 때문에 DB는 SQLi
 <table><tbody>
  <tr>
   <td>
-   <div align="center"><a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a></div>
+   <div align="center"><a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="60" height="40"/> </a></div>
   </td>
   <td>
    <div align="center"><a href="https://www.docker.com/" target="_blank"> <img src="https://www.docker.com/sites/default/files/d8/2019-07/vertical-logo-monochromatic.png" alt="docker" width="40" height="40"/> </a></div>
