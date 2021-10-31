@@ -1,6 +1,6 @@
 from django_seed import Seed
 from django.core.management.base import BaseCommand
-from django.contrib.auth.models import User
+from users.models import User
 
 
 class Command(BaseCommand):
@@ -22,7 +22,8 @@ class Command(BaseCommand):
             number,
             {
                 "is_staff": False,
-                "is_superuser": False,
+                "name": lambda x: seeder.faker.name(),
+                "email": lambda x: seeder.faker.email(),
             },
         )
         seeder.execute()
