@@ -22,8 +22,10 @@ class Command(BaseCommand):
             number,
             {
                 "is_staff": False,
+                "is_superuser": False,
                 "name": lambda x: seeder.faker.name(),
                 "email": lambda x: seeder.faker.email(),
+                "password": lambda x: seeder.faker.password(),
             },
         )
         seeder.execute()
