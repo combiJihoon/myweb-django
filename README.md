@@ -3,6 +3,7 @@
 Django를 백엔드 서버로 하여 게시판 CRUD 연습해 보았습니다.
 <br>
 각 게시글마다 "제목", "내용", "작성자", "작성일", "수정일"이 포함되어 있습니다.
+<br>
 도커를 이용해 aws에 배포까지 완료 하였으며 현재 users 앱 수정 중입니다.
 <br>
 Django RESTframework를 사용하였으며, 연습용이기 때문에 DB는 SQLite를 사용했습니다.
@@ -69,6 +70,8 @@ Django RESTframework를 사용하였으며, 연습용이기 때문에 DB는 SQLi
     <td align = "center">SQLite</td>
   </tr>
 </tbody></table>
+
+<br>
 
 # 🔧 Proejct Setup / and Organization
 
@@ -142,6 +145,8 @@ docker build -t yourdockerusername/dockerfilename .
 ```bash
 docker run -dp 8000:8000 yourdockerusername/dockerfilename
 ```
+
+<br>
 
 # :books: API List
 
