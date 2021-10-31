@@ -1,10 +1,13 @@
 # Django를 이용한 게시판 CRUD 백엔드 서버
 
-Django를 백엔드 서버로 하여 게시판 CRUD 연습해 보았습니다.  
+Django를 백엔드 서버로 하여 게시판 CRUD 연습해 보았습니다.
+<br>
 각 게시글마다 "제목", "내용", "작성자", "작성일", "수정일"이 포함되어 있습니다.
 도커를 이용해 aws에 배포까지 완료 하였으며 현재 users 앱 수정 중입니다.
-
+<br>
 Django RESTframework를 사용하였으며, 연습용이기 때문에 DB는 SQLite를 사용했습니다.
+
+<br>
 
 # 🔧 Tech Stack
 
@@ -33,10 +36,10 @@ Django RESTframework를 사용하였으며, 연습용이기 때문에 DB는 SQLi
    <div align="center"><a href="https://www.python.org/" target="_blank"> <img src="https://www.python.org/static/community_logos/python-powered-h.svg" alt="Python" width="40" height="40"/> </a></div>
   </td>
   <td width="75">
-   <div align="center"><a href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank"> <img src="https://commons.wikimedia.org/wiki/File:Django_logo.svg" alt="Django" width="40" height="40"/> </a></div>
+   <div align="center"><a href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank"> <img src="https://media.vlpt.us/images/combi_jihoon/post/a86eb6b0-2dfc-42f9-8c08-db0ff24e9c09/django.png?w=768" alt="Django" width="40" height="40"/> </a></div>
   </td>
   <td width="75">
-   <div align="center"><a href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank"> <img src="https://www.django-rest-framework.org/img/logo.png" alt="Django RESTframework" width="40" height="40"/> </a></div>
+   <div align="center"><a href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank"> <img src="https://www.django-rest-framework.org/img/logo.png" alt="Django RESTframework" width="80" height="40"/> </a></div>
   </td>
   <td width="75">
    <div align="center"><a href="https://www.linux.org/" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="linux" width="40" height="40"/> </a></div>
@@ -59,7 +62,7 @@ Django RESTframework를 사용하였으며, 연습용이기 때문에 DB는 SQLi
 <table><tbody>
  <tr>
   <td>
-   <div align="center"><a href="https://www.sqlite.org/index.html" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/SQLite370.svg/764px-SQLite370.svg.png" alt="sqlite" width="40" height="40"/> </a></div>
+   <div align="center"><a href="https://www.sqlite.org/index.html" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/SQLite370.svg/764px-SQLite370.svg.png" alt="sqlite" width="60" height="40"/> </a></div>
   </td>
  </tr>
   <tr>
