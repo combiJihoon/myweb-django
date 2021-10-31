@@ -152,9 +152,16 @@ docker run -dp 8000:8000 yourdockerusername/dockerfilename
 
 ## Boards
 
-- BoardView: '/board' GET POST
-- BoardDetailView:'/board/<int:pk>' GET PUT DELETE
+1. BoardView
+
+- '/board' GET POST
+
+2. BoardDetailView
+
+- '/board/<int:pk>' GET PUT DELETE
 
 ## Users(수정중)
 
-- UserView: '/users/' GET
+1. UserView
+
+- '/users/' GET
