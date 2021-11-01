@@ -8,7 +8,6 @@ class BoardSerializer(serializers.ModelSerializer):
         model = Board
         fields = [
             "id",
-            "author_id",
             "author_email",
             "title",
             "content",
@@ -27,7 +26,6 @@ class BoardDetailSerializer(serializers.ModelSerializer):
         model = Board
         fields = [
             "id",
-            "author_id",
             "author_email",
             "title",
             "content",
