@@ -37,7 +37,7 @@ Django RESTframework를 사용하였으며, 연습용이기 때문에 DB는 SQLi
    <div align="center"><a href="https://www.python.org/" target="_blank"> <img src="https://www.python.org/static/community_logos/python-powered-h.svg" alt="Python" width="40" height="40"/> </a></div>
   </td>
   <td width="75">
-   <div align="center"><a href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank"> <img src="https://media.vlpt.us/images/combi_jihoon/post/a86eb6b0-2dfc-42f9-8c08-db0ff24e9c09/django.png?w=768" alt="Django" width="40" height="40"/> </a></div>
+   <div align="center"><a href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank"> <img src="https://media.vlpt.us/images/combi_jihoon/post/a86eb6b0-2dfc-42f9-8c08-db0ff24e9c09/django.png?w=768" alt="Django" width="80" height="40"/> </a></div>
   </td>
   <td width="75">
    <div align="center"><a href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank"> <img src="https://www.django-rest-framework.org/img/logo.png" alt="Django RESTframework" width="80" height="40"/> </a></div>
@@ -152,16 +152,40 @@ docker run -dp 8000:8000 yourdockerusername/dockerfilename
 
 ## Boards
 
-#### 1. BoardView
+#### 1. BoardAPI
+
+인증되지 않은 유저도 게시물을 볼 수 있으며, 글쓰기 기능은 로그인한 인증된 가능합니다.
+<br>
 
 - '/board' GET POST
 
-#### 2. BoardDetailView
+#### 2. BoardDetailAPI
+
+board id를 이용해 접근하며 인증 & 허용된 유저에게만 수정, 삭제 권한을 부여했습니다.
+<br>
 
 - '/board/<int:pk>' GET PUT DELETE
 
-## Users(수정중)
+## Users
 
-#### 1. UserView
+Logout 기능의 경우 knox를 이용하며, 발급된 token을 폐기합니다.
 
-- '/users/' GET
+#### 1. ReigstrationAPI
+
+knox를 이용해 가입시 유저 token을 부여합니다.
+<br>
+
+- '/users/register' POST
+
+#### 2. LoginAPI
+
+이메일 아이디와 비밀번호로 로그인하며, 로그인시 token이 발급됩니다.
+
+- '/users/login' POST
+
+#### 3. UserAPI
+
+user token으로 인증된 유저의 아이디와 이름을 확인합니다.
+<br>
+
+- '/users' GET
