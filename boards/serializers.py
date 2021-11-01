@@ -10,7 +10,6 @@ class BoardSerializer(serializers.ModelSerializer):
             "id",
             "author_email",
             "title",
-            "content",
             "dt_created",
             "dt_modified",
         ]
