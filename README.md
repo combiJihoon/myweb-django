@@ -75,6 +75,13 @@ Dokerfile이 설정되어 있어 도커를 이용해 컨테이너 생성이 가�
 
 <br>
 
+## ERD
+
+<br>
+<img src="https://user-images.githubusercontent.com/74451822/139637665-102ace6c-7356-4464-bdfa-f1e5c610fde3.png" alt="erd" width="300px" />
+
+<br>
+
 # 🔧 Proejct Setup / and Organization
 
 ## Project structure
