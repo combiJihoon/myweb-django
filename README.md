@@ -1,13 +1,14 @@
 # Django를 이용한 게시판 CRUD 백엔드 서버
 
-Django를 백엔드 서버로 하여 게시판 CRUD를 연습해 보았습니다.
+Django를 백엔드 서버로 하여 만든 게시판으로, CRUD가 가능하며 커스텀 유저도 함께 구현했습니다.
 <br>
 각 게시글마다 "제목", "내용", "작성자", "작성일", "수정일"이 포함되어 있습니다.
 <br>
-도커를 이용해 aws에 배포까지 완료 하였으며 현재 users 앱 수정 중입니다.
+가입, 로그인시 knox를 이용해 토큰을 부여합니다.
 <br>
 Django RESTframework를 사용하였으며, 연습용이기 때문에 DB는 SQLite를 사용했습니다.
-
+<br>
+Dokerfile이 설정되어 있어 도커를 이용해 컨테이너 생성이 가능합니다.
 <br>
 
 # 🔧 Tech Stack
@@ -154,7 +155,7 @@ docker run -dp 8000:8000 yourdockerusername/dockerfilename
 
 #### 1. BoardAPI
 
-인증되지 않은 유저도 게시물을 볼 수 있으며, 글쓰기 기능은 로그인한 인증된 가능합니다.
+인증되지 않은 유저도 게시물을 볼 수 있으며, 글쓰기 기능은 인증된 사용자만 가능합니다.
 <br>
 
 - '/board' GET POST
