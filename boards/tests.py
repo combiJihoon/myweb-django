@@ -1,7 +1,6 @@
 import json
 from rest_framework.test import APITestCase
 from rest_framework.test import APIClient
-from rest_framework.authtoken.models import Token
 from .models import Board
 from django.contrib.auth import get_user_model
 
