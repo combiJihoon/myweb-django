@@ -29,7 +29,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG")
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["127.0.0.1", "aanaquaebg.execute-api.ap-northeast-2.amazonaws.com"]
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_s3_storage",
     "boards",
     "users",
     "rest_framework",
@@ -90,17 +91,41 @@ TEMPLATES = [
 WSGI_APPLICATION = "myweb.wsgi.application"
 
 
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+# S3 storage
+S3_BUCKET_NAME = "developer-zappa-static"
+STATICFILES_STORAGE = "django_s3_storage.storage.StaticS3Storage"
+AWS_S3_BUCKET_NAME_STATIC = S3_BUCKET_NAME
+# serve the static files directly from the specified s3 bucket
+AWS_S3_CUSTOM_DOMAIN = "%s.s3.amazonaws.com" % S3_BUCKET_NAME
+STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
+
+
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+if DEBUG:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+            "BUCKET": "developer-zappa-static",
+        }
     }
-}
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "mysql.connector.django",
+            "NAME": env("DB_NAME"),  # dbname
+            "USER": env("DB_USER"),  # master username
+            "PASSWORD": env("DB_PASSWORD"),  # master password
+            "HOST": env("DB_HOST"),  # Endpoint
+            "PORT": "3306",
+            "BUCKET": "developer-zappa-static",
+        }
+    }
 
 
 # Password validation
