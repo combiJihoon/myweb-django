@@ -205,12 +205,17 @@ zappa deploy
 
 인증되지 않은 유저도 게시물을 볼 수 있으며, 글쓰기 기능은 인증된 사용자만 가능합니다.
 <br>
+POST method로 요청시 Header에 'Content-Type', 'Authorization'이 포함되어야 합니다.
+<br>
 
 - '/board' GET POST
 
 #### 2. BoardDetailAPI
 
 board id를 이용해 접근하며 인증 & 허용된 유저에게만 수정, 삭제 권한을 부여했습니다.
+<br>
+Header에 'Content-Type'과 'Authorization'이, body에 'title', 'content'가 포함되어야 합니다.
+
 <br>
 
 - '/board/<int:pk>' GET PUT DELETE
@@ -223,12 +228,17 @@ Logout 기능의 경우 knox를 이용하며, 발급된 token을 폐기합니다
 
 knox를 이용해 가입시 유저 token을 부여합니다.
 <br>
+Header에 'Content-Type', body에 'email'과 'name', 'password'가 포함되어야 합니다.
+
+<br>
 
 - '/users/register' POST
 
 #### 2. LoginAPI
 
 이메일 아이디와 비밀번호로 로그인하며, 로그인시 token이 발급됩니다.
+<br>
+Header에 'Content-Type', body에 'email'과 'password'가 포함되어야 합니다.
 
 - '/users/login' POST
 
@@ -236,5 +246,7 @@ knox를 이용해 가입시 유저 token을 부여합니다.
 
 user token으로 인증된 유저의 아이디와 이름을 확인합니다.
 <br>
+Header에 'Content-Type', body에 'email'과 'name'이 포함되어야 합니다.
+<br>
 
-- '/users' GET
+- '/user' GET
