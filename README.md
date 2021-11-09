@@ -8,7 +8,7 @@ Django를 백엔드 서버로 하여 만든 게시판으로, CRUD가 가능하�
 <br>
 가입, 로그인시 knox를 이용해 토큰을 부여하며 로그아웃시 토큰이 폐기되는 방식입니다.
 <br>
-Django RESTframework를 사용하였으며, DB는 MySQL RDS를 사용했습니다.
+Django RESTframework를 사용하였으며, DB는 PostgreSQL RDS를 사용했습니다.
 <br>
 zappa를 이용해 deploy를 하여, lamdba와 S3가 사용됩니다.
 <br>
@@ -84,12 +84,12 @@ zappa를 이용해 deploy를 하여, lamdba와 S3가 사용됩니다.
    <div align="center"><a href="https://aws.amazon.com/ko/rds/" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/AWS_Simple_Icons_Database_Amazon_RDS_DB_Instance_Standby.svg/640px-AWS_Simple_Icons_Database_Amazon_RDS_DB_Instance_Standby.svg.png" alt="rds" width="40" height="40"/> </a></div>
   </td>
   <td>
-   <div align="center"><a href="https://www.mysql.com/" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Database-mysql.svg/640px-Database-mysql.svg.png" alt="mysql" width="40" height="40"/> </a></div>
+   <div align="center"><a href="https://www.postgresql.org/" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/640px-Postgresql_elephant.svg.png" alt="PostgreSQL" width="40" height="40"/> </a></div>
   </td>
  </tr>
   <tr>
     <td align = "center">RDS</td>
-    <td align = "center">MySQL</td>
+    <td align = "center">PostgreSQL</td>
   </tr>
 </tbody></table>
 
