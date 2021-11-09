@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 import environ
 
-env = environ.Env(DEBUG=(bool, True))
+env = environ.Env(DEBUG=(bool, False))
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -29,7 +29,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG")
 
-ALLOWED_HOSTS = ["127.0.0.1", "aanaquaebg.execute-api.ap-northeast-2.amazonaws.com"]
+ALLOWED_HOSTS = ["127.0.0.1", "xd02rna4va.execute-api.ap-northeast-2.amazonaws.com"]
 
 
 # Application definition
@@ -44,9 +44,11 @@ INSTALLED_APPS = [
     "django_s3_storage",
     "boards",
     "users",
+    "core",
     "rest_framework",
     "knox",
     "django_seed",
+    "zappa_django_utils",
 ]
 
 AUTH_USER_MODEL = "users.User"
